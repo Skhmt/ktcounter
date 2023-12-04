@@ -1,0 +1,128 @@
+# CAVE ESLint config
+# 
+# version: 1.0.3
+# date:    24 August 2021
+#
+# You can modify anything except for `rules` without incrementing the version
+# Don't upload changes to this config's repository unless you're changing `rules`
+
+env:
+  ##### ENVIRONMENT
+
+  browser: true
+  # node: true
+  # shared-node-browser: true # For globals common to both Node.js and the browser
+  # worker: true              # For web workers
+  # amd: true                 # For `require()` and `define()` per amd spec
+  # commonjs: true            # For browser-only code that uses Browserify/Webpack
+
+  ##### TEST SUITES
+
+  # jasmine: true
+  # mocha: true
+  # jest: true
+
+  ##### ES VERSION
+
+  # es6: true
+  # es2017: true
+  es2020: true
+  # es2021: true
+
+# globals:
+  # nw: readonly # for nw.js
+  # d3: readonly
+
+# parser: vue-eslint-parser # Can comment this out if not using on a Vue component (.vue file)
+
+parserOptions:
+  sourceType: script # `script` is default, can be changed to `module`
+  ecmaFeatures:
+    impliedStrict: true
+
+extends:
+  - eslint:recommended # See https://eslint.org/docs/rules/
+  - plugin:svelte/recommended
+
+rules:
+  ### Override default settings
+  no-empty: error
+  no-inner-declarations: off
+  no-unexpected-multiline: error
+  curly:
+    - error
+    - multi-line
+  default-case: error
+  default-case-last: error
+  dot-location: 
+    - error
+    - property
+  eqeqeq: error
+  no-else-return: error
+  no-eval: error
+  no-extend-native: error
+  no-floating-decimal: error
+  no-multi-spaces: error
+  no-new: warn
+  no-octal: warn
+  no-param-reassign: error
+  no-use-before-define:
+    - error
+    - functions: false
+
+  ### Stylistic issues
+  array-bracket-spacing: error
+  arrow-spacing: error
+  block-spacing: error
+  brace-style:
+    - error
+    - stroustrup
+    - allowSingleLine: true
+  camelcase: warn
+  comma-dangle: 
+    - error
+    - always-multiline
+  comma-spacing: error
+  comma-style: error
+  func-call-spacing: error
+  func-style: 
+    - error
+    - declaration
+    - allowArrowFunctions: true
+  implicit-arrow-linebreak:
+    - error
+    - beside
+  indent: # might need more work - https://eslint.org/docs/rules/indent
+    - warn
+    - tab # this enforces tabs vs spaces for indenting
+    - ignoredNodes:
+      - ConditionalExpression
+      ignoreComments: false
+  keyword-spacing: error
+  no-array-constructor: warn
+  no-new-object: warn
+  no-new-wrappers: warn
+  no-nested-ternary: error
+  no-trailing-spaces: error
+  one-var:
+    - error
+    - never
+  one-var-declaration-per-line:
+    - error
+    - always
+  quote-props:
+    - error
+    - consistent-as-needed
+  quotes:
+    - error
+    - single # prefers single quote
+    - avoidEscape: true # allows any quote to avoid escaping within a string
+      allowTemplateLiterals: true # can always use backticks for string literals
+  semi: error
+  space-in-parens: error
+  space-infix-ops: error
+  no-var: error
+  object-shorthand: error
+  prefer-arrow-callback: error
+  prefer-const: error
+  prefer-template: error
