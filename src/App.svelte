@@ -11,7 +11,7 @@
 	import {p1_cp, p1_vp, p2_cp, p2_vp} from './lib/stores.js';
 </script>
 
-<main class="min-h-[100dvh]">
+<main class="min-h-[100dvh] overflow-hidden overscroll-none">
 	<div class="navbar bg-primary mb-8">
 		<div class="flex-1 text-xl">
 			Killteam Counter
