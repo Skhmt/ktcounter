@@ -1,37 +1,55 @@
 <script>
 	// import svelteLogo from './assets/svelte.svg';
 	// import viteLogo from '/vite.svg';
-	import P1_VP from './lib/P1_VP.svelte';
-	import P1_CP from './lib/P1_CP.svelte';
-	import P1_Timer from './lib/P1_Timer.svelte';
-	import P2_VP from './lib/P2_VP.svelte';
-	import P2_CP from './lib/P2_CP.svelte';
-	import P2_Timer from './lib/P2_Timer.svelte';
-	import Turn from './lib/Turn.svelte';
-	import Pause from './lib/Pause.svelte';
-	import Settings from './lib/Settings.svelte';
+	import Counter from './lib/Counter.svelte';
+	import Faction from './lib/Faction.svelte';
+	import Row from './lib/Row.svelte';
+	import Options from './lib/Options.svelte';
 	import NoSleep from './lib/NoSleep.svelte';
-	import SettingsModal from './lib/SettingsModal.svelte';
+	import Reset from './lib/Reset.svelte';
+
+	import {p1_cp, p1_vp, p2_cp, p2_vp} from './lib/stores.js';
 </script>
 
-<main>
-	<!-- <div>
-		<a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-			<img src={viteLogo} class="logo" alt="Vite Logo" />
-		</a>
-		<a href="https://svelte.dev" target="_blank" rel="noreferrer">
-			<img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-		</a>
-	</div> -->
-	<div class="gridRow">
-		<div class="gridRow controlGrid">
-				<P2_VP /> <P2_CP />
-		
-				<Pause /> <Turn /> <Settings /> <NoSleep />
-		
-				<P1_VP /> <P1_CP />
+<main class="min-h-[100dvh]">
+	<div class="navbar bg-primary mb-8">
+		<div class="flex-1 text-xl">
+			Killteam Counter
+		</div>
+		<div class="flex-none">
+			<ul class="menu menu-horizontal px-1">
+			<li><Reset /></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- <div class="columns-1 2xl:columns-2 relative inset-0 min-h-full"> -->
+	<div class="flex flex-col 2xl:flex-row min-w-full">
+		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half 2xl:min-h-full min-w-[100%] 2xl:min-w-half">
+			<Row>
+				<input type="text" placeholder="Player 1" class="input input-bordered input-primary min-w-56" />
+				<Faction />
+			</Row>
+			<Row>
+				<Options />
+			</Row>
+			<Row>
+				<Counter store={p1_cp}>CP</Counter>
+				<Counter store={p1_vp}>VP</Counter>
+			</Row>
+		</div>
+		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half 2xl:min-h-full min-w-[100%] 2xl:min-w-half mt-10 2xl:mt-0">
+			<Row>
+				<input type="text" placeholder="Player 2" class="input input-bordered input-primary min-w-56" />
+				<Faction />
+			</Row>
+			<Row>
+				<Options />
+			</Row>
+			<Row>
+				<Counter store={p2_cp}>CP</Counter>
+				<Counter store={p2_vp}>VP</Counter>
+			</Row>
 		</div>
 	</div>
 </main>
-
-<SettingsModal />
