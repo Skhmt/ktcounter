@@ -27,7 +27,7 @@
 	<div class="flex flex-col 2xl:flex-row min-w-full">
 		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half 2xl:min-h-full min-w-[100%] 2xl:min-w-half">
 			<Row>
-				<input type="text" placeholder="Player 1" class="input input-bordered input-primary min-w-56" />
+				<input type="text" placeholder="Player 1" class="input input-bordered input-primary min-w-half" />
 				<Faction />
 			</Row>
 			<Row>
@@ -40,7 +40,7 @@
 		</div>
 		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half 2xl:min-h-full min-w-[100%] 2xl:min-w-half mt-10 2xl:mt-0">
 			<Row>
-				<input type="text" placeholder="Player 2" class="input input-bordered input-primary min-w-56" />
+				<input type="text" placeholder="Player 2" class="input input-bordered input-primary min-w-half" />
 				<Faction />
 			</Row>
 			<Row>
