@@ -18,7 +18,6 @@
 		'Talons of the Emperor',
 		'Tomb World',
 		'Traitor Space Marine',
-		'Veteran Guardsman'
 	];
 
 	const bespokeFactions = [
@@ -49,7 +48,8 @@
 		'Strike Force Justian',
 		'Warpcoven',
 		'Wyrmblade',
-		'Void-dancer Troupe'
+		'Veteran Guardsman',
+		'Void-dancer Troupe',
 	];
 </script>
 
