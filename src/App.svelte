@@ -32,7 +32,7 @@
 				<Faction store={store.p1.faction} />
 			</Row>
 			<Row>
-				<Options />
+				<Options paintedstore={store.p1.painted} initstore={store.p1.init} />
 			</Row>
 			<Row>
 				<Counter store={store.p1.cp}>CP</Counter>
@@ -45,7 +45,7 @@
 				<Faction store={store.p2.faction} />
 			</Row>
 			<Row>
-				<Options />
+				<Options paintedstore={store.p2.painted} initstore={store.p2.init} />
 			</Row>
 			<Row>
 				<Counter store={store.p2.cp}>CP</Counter>
