@@ -4,7 +4,7 @@ count victory and command points
 
 ## Todo
 
-- [ ] TP1 has a bug with resetting
+- [x] TP1 has a bug with resetting
 - [ ] Figure out a better color theme
 - [ ] Add secondaries dependent on faction selection
 - [ ] Make initiative/attacker xor with the other player's initiative
