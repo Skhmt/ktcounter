@@ -49,7 +49,7 @@
 			</Row>
 			<Row>
 				<SingleCheck store={store.p2.painted}>Painted?</SingleCheck>
-				<SingleCheck store={store.p2.init}>Init?</SingleCheck>
+				<SingleCheck store={store.p2.init}>Attacker?</SingleCheck>
 			</Row>
 			<Row>
 				<Counter store={store.p2.cp}>CP</Counter>
