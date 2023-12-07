@@ -31,7 +31,7 @@
 
 <div class="form-control ml-10">
 	<label class="label cursor-pointer">
-		<span class="label-text">Initiative?</span> 
+		<span class="label-text">Attacker?</span> 
 		<input type="checkbox" bind:checked={init} on:change={updateInit} class="checkbox ml-3" />
 	</label>
 </div>
