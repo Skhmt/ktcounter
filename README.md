@@ -4,14 +4,17 @@ count victory and command points
 
 ## Todo
 
-- [x] Save to localStorage
 - [ ] Figure out a better color theme
-- [x] Break out VP to secondaries and each TP
 - [ ] Add secondaries dependent on faction selection
+- [ ] Make initiative/attacker xor with the other player's initiative
+- [ ] Add modal/alert when resetting scores
+- [ ] Change reset to trash can icon
+      
+- [x] Save to localStorage
+- [x] Add turn counter
 - [x] Add an extra points (elite, saedath, etc) counter
 - [x] Move Vet guard to bespoke
-- [ ] Make initiative xor with the other player's initiative
-- [x] Add turn counter
+- [x] Break out VP to secondaries and each TP
 
 ## Maybe
 
