@@ -24,9 +24,6 @@
 	<button class="btn btn-secondary" on:click={decrement} title="Decrement">
 		<Fa icon={faMinus} />
 	</button>
-	<!-- <kbd class="kbd kbd-lg border-primary">
-		<span><strong>{count} <slot></slot></strong></span>
-	</kbd> -->
 	<div class="flex flex-col pl-4 pr-4 pt-1 bg-base-100 rounded-btn border-primary text-neutral-content">
 		<span class="countdown font-mono text-xl">
 			<span style="--value:{count}"></span>
