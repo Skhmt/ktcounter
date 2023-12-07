@@ -37,7 +37,7 @@
 			<span class="text-sm pl-1">{postText}</span>
 		{/if}
 	</div>
-	<button class="btn btn-secondary btn-sm" on:click={increment} title="Increment">
+	<button class="btn btn-accent btn-sm" on:click={increment} title="Increment">
 		<Fa icon={faPlus} />
 	</button>	
 </div>
