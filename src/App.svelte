@@ -15,7 +15,7 @@
 	import {store} from './lib/stores.js';
 </script>
 
-<main class="min-h-[100dvh] overflow-hidden overscroll-none">
+<main class="min-h-[100dvh] overflow-hidden overscroll-none bg-[black]">
 	<div class="navbar bg-primary mb-0">
 		<div class="navbar-start">
 			<img src={ktcLogo} class="logo w-14 h-14" alt="Kill Team Counter Logo" />
