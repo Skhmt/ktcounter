@@ -14,4 +14,5 @@
 	}
 </script>
 
-<input type="text" bind:value={name} on:input={update} placeholder={placeholder} class="input input-bordered input-primary min-w-half" />
+<input type="text" bind:value={name} on:input={update} placeholder={placeholder} 
+	class="input input-bordered input-primary min-w-half md:input-sm" />

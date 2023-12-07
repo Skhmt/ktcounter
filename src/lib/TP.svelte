@@ -16,7 +16,7 @@
 	<div class="label">
 		<span class="label-text-alt"><slot></slot></span>
 	</div>
-	<select class="select select-bordered" bind:value={selected} on:change={update}>
+	<select class="select select-bordered select-sm" bind:value={selected} on:change={update}>
 		<option selected>0</option>
 		<option>1</option>
 		<option>2</option>
