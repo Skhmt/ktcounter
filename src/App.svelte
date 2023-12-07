@@ -75,7 +75,9 @@
 				<SingleCheck store={store.p2.init}>Attacker?</SingleCheck>
 			</Row>
 			<Row>
-				<Counter store={store.p2.cp} preText="" postText="CP"></Counter>
+				<Counter store={store.p2.cp}>
+					<span slot="postText">CP</slot>
+				</Counter>
 				<VP player={store.p2} />
 			</Row>
 			<Row>
