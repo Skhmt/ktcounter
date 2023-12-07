@@ -76,7 +76,7 @@
 			</Row>
 			<Row>
 				<Counter store={store.p2.cp}>
-					<span slot="postText">CP</slot>
+					<span slot="postText">CP</span>
 				</Counter>
 				<VP player={store.p2} />
 			</Row>
