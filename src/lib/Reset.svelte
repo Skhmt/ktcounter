@@ -2,10 +2,10 @@
 	import Fa from 'svelte-fa';
 	import { faRotateRight } from '@fortawesome/free-solid-svg-icons/index.js';
 
-	import { reset } from './stores.js';
+	import { store } from './stores.js';
 
 	function resetCounter() {
-		reset();
+		store.reset();
 		window?.navigator?.vibrate?.(100);
 	}
 </script>

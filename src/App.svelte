@@ -5,10 +5,11 @@
 	import Faction from './lib/Faction.svelte';
 	import Row from './lib/Row.svelte';
 	import Options from './lib/Options.svelte';
+	import Name from './lib/Name.svelte';
 	import NoSleep from './lib/NoSleep.svelte';
 	import Reset from './lib/Reset.svelte';
 
-	import {p1_cp, p1_vp, p2_cp, p2_vp} from './lib/stores.js';
+	import {store} from './lib/stores.js';
 </script>
 
 <main class="min-h-[100dvh] overflow-hidden overscroll-none">
@@ -24,31 +25,31 @@
 	</div>
 
 	<!-- <div class="columns-1 2xl:columns-2 relative inset-0 min-h-full"> -->
-	<div class="flex flex-col 2xl:flex-row min-w-full">
-		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half 2xl:min-h-full min-w-[100%] 2xl:min-w-half">
+	<div class="flex flex-col md:flex-row min-w-full">
+		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half md:min-h-full min-w-[100%] md:min-w-half">
 			<Row>
-				<input type="text" placeholder="Player 1" class="input input-bordered input-primary min-w-half" />
-				<Faction />
+				<Name store={store.p1.name} placeholder="Player 1" />
+				<Faction store={store.p1.faction} />
 			</Row>
 			<Row>
 				<Options />
 			</Row>
 			<Row>
-				<Counter store={p1_cp}>CP</Counter>
-				<Counter store={p1_vp}>VP</Counter>
+				<Counter store={store.p1.cp}>CP</Counter>
+				<Counter store={store.p1.tp1_vp}>VP</Counter>
 			</Row>
 		</div>
-		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half 2xl:min-h-full min-w-[100%] 2xl:min-w-half mt-10 2xl:mt-0">
+		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half md:min-h-full min-w-[100%] md:min-w-half mt-10 md:mt-0">
 			<Row>
-				<input type="text" placeholder="Player 2" class="input input-bordered input-primary min-w-half" />
-				<Faction />
+				<Name store={store.p2.name} placeholder="Player 2" />
+				<Faction store={store.p2.faction} />
 			</Row>
 			<Row>
 				<Options />
 			</Row>
 			<Row>
-				<Counter store={p2_cp}>CP</Counter>
-				<Counter store={p2_vp}>VP</Counter>
+				<Counter store={store.p2.cp}>CP</Counter>
+				<Counter store={store.p2.tp1_vp}>VP</Counter>
 			</Row>
 		</div>
 	</div>

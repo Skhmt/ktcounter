@@ -1,43 +1,76 @@
 import { writable } from 'svelte/store';
 
-// app state
-
-export const showSettings = writable(false);
-
-// overall game state
-
-export const turn = writable(1);
-export const total_time = writable(50*60*1000);
-
-// p1 game state
-
-export const p1_vp = writable(0);
-export const p1_cp = writable(0);
-export const p1_ellapsed_time = writable(0);
-export const p1_last_time = writable(0);
-export const p1_isRunning = writable(false);
-
-// p2 game state
-
-export const p2_vp = writable(0);
-export const p2_cp = writable(0);
-export const p2_ellapsed_time = writable(0);
-export const p2_last_time = writable(0);
-export const p2_isRunning = writable(false);
-
-export const reset = () => {
-    turn.set(1);
-    p1_vp.set(0);
-    p1_cp.set(3);
-    
-    p2_vp.set(0);
-    p2_cp.set(3);
-   
-    p1_ellapsed_time.set(0);
-    p1_isRunning.set(false);
-
-    p2_ellapsed_time.set(0);
-    p2_isRunning.set(false);
+export const store = {
+	turn: storable('turn', 1),
+	p1: {
+		tp1_vp: storable('p1_tp1_vp', 0),
+		tp2_vp: storable('p1_tp2_vp', 0),
+		tp3_vp: storable('p1_tp3_vp', 0),
+		tp4_vp: storable('p1_tp4_vp', 0),
+		taco1_name: storable('p1_taco1_name', ''),
+		taco2_name: storable('p1_taco2_name', ''),
+		taco3_name: storable('p1_taco3_name', ''),
+		taco1_vp: storable('p1_taco1_vp', 0),
+		taco2_vp: storable('p1_taco2_vp', 0),
+		taco3_vp: storable('p1_taco3_vp', 0),
+		cp: storable('p1_cp', 3),
+		bespokePoints: storable('p1_bespokePoints', 0),
+		name: storable('p1_name', ''),
+		faction: storable('p1_faction', ''),
+		painted: storable('p1_painted', true),
+		init: storable('p1_init', false),
+	},
+	p2: {
+		tp1_vp: storable('p2_tp1_vp', 0),
+		tp2_vp: storable('p2_tp2_vp', 0),
+		tp3_vp: storable('p2_tp3_vp', 0),
+		tp4_vp: storable('p2_tp4_vp', 0),
+		taco1_name: storable('p2_taco1_name', ''),
+		taco2_name: storable('p2_taco2_name', ''),
+		taco3_name: storable('p2_taco3_name', ''),
+		taco1_vp: storable('p2_taco1_vp', 0),
+		taco2_vp: storable('p2_taco2_vp', 0),
+		taco3_vp: storable('p2_taco3_vp', 0),
+		cp: storable('p2_cp', 3),
+		bespokePoints: storable('p2_bespokePoints', 0),
+		name: storable('p2_name', ''),
+		faction: storable('p2_faction', ''),
+		painted: storable('p2_painted', true),
+		init: storable('p2_init', false),
+	},
+	reset() {
+		this.turn.default();
+		for (let x of Object.entries(this.p1)) {
+			x[1].default();
+		}
+		for (let y of Object.entries(this.p2)) {
+			y[1].default();
+		}
+	}
 };
 
-reset();
+function storable(name, defaultVal) {
+	// set default in localStorage if it doesn't exist 
+	if (!localStorage.getItem(name)) {
+		const dataString = JSON.stringify(defaultVal);
+		localStorage.setItem(name, dataString);
+	}
+	
+	const privateStore = writable(JSON.parse(localStorage.getItem(name)));
+	
+	// whenever store updates, set localStorage
+	privateStore.subscribe(newVal => {
+		localStorage.setItem(name, JSON.stringify(newVal));
+	});
+	
+	// pass through store's methods
+	const {subscribe, set, update} = privateStore;
+	return {
+		subscribe,
+		set,
+		update,
+		default() {
+			privateStore.set(defaultVal);
+		}
+	};
+}

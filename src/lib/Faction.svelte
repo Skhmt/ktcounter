@@ -1,5 +1,5 @@
 <script>
-	// export let store;
+	export let store;
 
 	const compendiumFactions = [
 		'Brood Coven',
@@ -51,18 +51,29 @@
 		'Veteran Guardsman',
 		'Void-dancer Troupe',
 	];
+
+	let selected;
+
+	let unsubscribe = store.subscribe(value => {
+		if (value) selected = value;
+		else selected = 'Select Faction';
+	});
+
+	function update() {
+		store.set(selected);
+	}
 </script>
 
-<select class="select select-bordered">
+<select class="select select-bordered" bind:value={selected} on:change={update}>
 	<option disabled selected>Select Faction</option>
 	<optgroup label="Bespoke Teams">
 		{#each bespokeFactions as bf}
-			<option>{bf}</option>
+			<option value={bf}>{bf}</option>
 		{/each}
 	</optgroup>
 	<optgroup label="Compendium Teams">
 		{#each compendiumFactions as cf}
-			<option>{cf}</option>
+			<option value={cf}>{cf}</option>
 		{/each}
 	</optgroup>
 </select>
