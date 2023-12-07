@@ -21,7 +21,9 @@
 			<img src={ktcLogo} class="logo w-14 h-14" alt="Kill Team Counter Logo" />
 		</div>
 		<div class="navbar-center">
-			<Counter store={store.turn} preText="TP" postText=""></Counter>
+			<Counter store={store.turn}>
+				<span slot="preText">TP</span>
+			</Counter>
 		</div>
 		<div class="navbar-end">
 			<ul class="menu menu-horizontal px-1">
@@ -42,7 +44,9 @@
 				<SingleCheck store={store.p1.init}>Attacker?</SingleCheck>
 			</Row>
 			<Row>
-				<Counter store={store.p1.cp} preText="" postText="CP"></Counter>
+				<Counter store={store.p1.cp}>
+					<span slot="postText">CP</span>
+				</Counter>
 				<VP player={store.p1} />
 			</Row>
 			<Row>
