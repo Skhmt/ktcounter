@@ -6,11 +6,11 @@ count victory and command points
 
 - [x] Save to localStorage
 - [ ] Figure out a better color theme
-- [ ] Break out VP to secondaries and each TP
+- [x] Break out VP to secondaries and each TP
 - [ ] Add secondaries dependent on faction selection
-- [ ] Add an extra points (elite, saedath, etc) counter
+- [x] Add an extra points (elite, saedath, etc) counter
 - [x] Move Vet guard to bespoke
-- [x] Make initiative xor with the other player's initiative
+- [ ] Make initiative xor with the other player's initiative
 - [x] Add turn counter
 
 ## Maybe

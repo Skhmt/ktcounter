@@ -59,7 +59,7 @@
 	}
 </script>
 
-<div class="flex flex-row content-center justify-center mt-3 md:mt-1">
+<div class="flex flex-row content-center justify-center mt-2 md:mt-1">
 	<select class="select select-bordered select-sm mt-1" bind:value={selected} on:change={updateTaco}>
 		<option disabled selected>Select Tac Op</option>
 		<optgroup label="Faction">

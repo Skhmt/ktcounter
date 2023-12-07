@@ -12,8 +12,8 @@
 	}
 </script>
 
-<label class="form-control">
-	<div class="label">
+<label class="form-control flex flex-row mt-3">
+	<div class="label mr-1">
 		<span class="label-text-alt"><slot></slot></span>
 	</div>
 	<select class="select select-bordered select-sm" bind:value={selected} on:change={update}>

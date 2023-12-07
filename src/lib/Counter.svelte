@@ -3,6 +3,8 @@
 	import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons/index.js';
 
 	export let store;
+	export let preText;
+	export let postText;
 
 	const increment = () => {
 		store.update(x => x + 1);
@@ -21,16 +23,21 @@
 </script>
 
 <div class="flex flex-row">
-	<button class="btn btn-secondary" on:click={decrement} title="Decrement">
+	<button class="btn btn-secondary btn-sm" on:click={decrement} title="Decrement">
 		<Fa icon={faMinus} />
 	</button>
-	<div class="flex flex-col pl-4 pr-4 pt-1 bg-base-100 rounded-btn border-primary text-neutral-content">
-		<span class="countdown font-mono text-xl">
+	<div class="flex flex-row px-4 pt-1 bg-base-100 rounded-btn border-primary text-neutral-content">
+		{#if preText}
+			<span class="text-sm pr-1">{preText}</span>
+		{/if}
+		<span class="countdown font-mono text-sm pt-1">
 			<span style="--value:{count}"></span>
 		</span>
-		<span><slot></slot></span>
+		{#if postText}
+			<span class="text-sm pl-1">{postText}</span>
+		{/if}
 	</div>
-	<button class="btn btn-secondary" on:click={increment} title="Increment">
+	<button class="btn btn-secondary btn-sm" on:click={increment} title="Increment">
 		<Fa icon={faPlus} />
 	</button>	
 </div>

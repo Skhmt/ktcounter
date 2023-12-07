@@ -7,6 +7,7 @@
 	import Name from './lib/Name.svelte';
 	import TP from './lib/TP.svelte';
 	import Tacop from './lib/Tacop.svelte';
+	import VP from './lib/VP.svelte';
 	import Reset from './lib/Reset.svelte';
 
 	// import NoSleep from './lib/NoSleep.svelte';
@@ -20,7 +21,7 @@
 			<img src={ktcLogo} class="logo w-14 h-14" alt="Kill Team Counter Logo" />
 		</div>
 		<div class="navbar-center">
-			<Counter store={store.turn}>TP</Counter>
+			<Counter store={store.turn} preText="TP" postText=""></Counter>
 		</div>
 		<div class="navbar-end">
 			<ul class="menu menu-horizontal px-1">
@@ -41,8 +42,8 @@
 				<SingleCheck store={store.p1.init}>Attacker?</SingleCheck>
 			</Row>
 			<Row>
-				<Counter store={store.p1.cp}>CP</Counter>
-				<Counter store={store.p1.bespokePoints}>🐈</Counter>
+				<Counter store={store.p1.cp} preText="" postText="CP"></Counter>
+				<VP player={store.p1} />
 			</Row>
 			<Row>
 				<TP store={store.p1.tp1_vp}>TP1</TP>
@@ -70,8 +71,8 @@
 				<SingleCheck store={store.p2.init}>Attacker?</SingleCheck>
 			</Row>
 			<Row>
-				<Counter store={store.p2.cp}>CP</Counter>
-				<Counter store={store.p2.bespokePoints}>🐈‍⬛</Counter>
+				<Counter store={store.p2.cp} preText="" postText="CP"></Counter>
+				<VP player={store.p2} />
 			</Row>
 			<Row>
 				<TP store={store.p2.tp1_vp}>TP1</TP>
