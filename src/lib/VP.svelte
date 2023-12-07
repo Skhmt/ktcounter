@@ -24,13 +24,14 @@
 		$taco3_vp1, $taco3_vp2,
 		$painted,
 	]) => {
-		let total = 0;
-		
-		total += $tp1_vp|0 + $tp2_vp|0 + $tp3_vp|0 + $tp4_vp|0;
-		total += $taco1_vp1|0 + $taco1_vp2|0;
-		total += $taco2_vp1|0 + $taco2_vp2|0;
-		total += $taco3_vp1|0 + $taco3_vp2|0;
-		total += $painted ? 2 : 0;
+		const total = [
+			$tp1_vp|0, $tp2_vp|0, $tp3_vp|0, $tp4_vp|0,
+			$taco1_vp1|0, $taco1_vp2|0,
+			$taco2_vp1|0, $taco2_vp2|0,
+			$taco3_vp1|0, $taco3_vp2|0,
+			$painted ? 2 : 0,
+		];
+		console.log(total);
 		
 		return total;
 	}, 0);
