@@ -36,6 +36,7 @@
 			</Row>
 			<Row>
 				<Counter store={store.p1.cp}>CP</Counter>
+				<div class="divider divider-horizontal"></div>
 				<Counter store={store.p1.tp1_vp}>VP</Counter>
 			</Row>
 		</div>
@@ -49,6 +50,7 @@
 			</Row>
 			<Row>
 				<Counter store={store.p2.cp}>CP</Counter>
+				<div class="divider divider-horizontal"></div>
 				<Counter store={store.p2.tp1_vp}>VP</Counter>
 			</Row>
 		</div>
