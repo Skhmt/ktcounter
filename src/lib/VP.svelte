@@ -22,7 +22,7 @@
 	}
 
 	player.tp1_vp.subscribe(val => {
-		if (val) data.tp1 = parseInt(val);
+		data.tp1 = parseInt(val);
 		total = recalc();
 	});
 
