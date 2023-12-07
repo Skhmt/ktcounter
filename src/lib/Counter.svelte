@@ -30,7 +30,7 @@
 		</span>
 		<span><slot></slot></span>
 	</div>
-	<button class="btn btn-primary" on:click={increment} title="Increment">
+	<button class="btn btn-secondary" on:click={increment} title="Increment">
 		<Fa icon={faPlus} />
 	</button>	
 </div>

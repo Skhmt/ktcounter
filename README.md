@@ -11,7 +11,7 @@ count victory and command points
 - [ ] Add an extra points (elite, saedath, etc) counter
 - [x] Move Vet guard to bespoke
 - [x] Make initiative xor with the other player's initiative
-- [ ] Add turn counter
+- [x] Add turn counter
 
 ## Maybe
 

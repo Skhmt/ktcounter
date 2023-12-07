@@ -1,6 +1,5 @@
 <script>
-	// import svelteLogo from './assets/svelte.svg';
-	// import viteLogo from '/vite.svg';
+	import ktcLogo from '/ktc192.png';
 	import Counter from './lib/Counter.svelte';
 	import Faction from './lib/Faction.svelte';
 	import Row from './lib/Row.svelte';
@@ -14,12 +13,15 @@
 
 <main class="min-h-[100dvh] overflow-hidden overscroll-none">
 	<div class="navbar bg-primary mb-8">
-		<div class="flex-1 text-xl">
-			Killteam Counter
+		<div class="navbar-start">
+			<img src={ktcLogo} class="logo w-14 h-14" alt="Kill Team Counter Logo" />
 		</div>
-		<div class="flex-none">
+		<div class="navbar-center">
+			<Counter store={store.turn}>TP</Counter>
+		</div>
+		<div class="navbar-end">
 			<ul class="menu menu-horizontal px-1">
-			<li><Reset /></li>
+				<li><Reset /></li>
 			</ul>
 		</div>
 	</div>
