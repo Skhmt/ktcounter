@@ -4,7 +4,7 @@
 	import Counter from './lib/Counter.svelte';
 	import Faction from './lib/Faction.svelte';
 	import Row from './lib/Row.svelte';
-	import Options from './lib/Options.svelte';
+	import SingleCheck from './lib/SingleCheck.svelte';
 	import Name from './lib/Name.svelte';
 	import NoSleep from './lib/NoSleep.svelte';
 	import Reset from './lib/Reset.svelte';
@@ -32,11 +32,11 @@
 				<Faction store={store.p1.faction} />
 			</Row>
 			<Row>
-				<Options paintedstore={store.p1.painted} initstore={store.p1.init} />
+				<SingleCheck store={store.p1.painted}>Painted?</SingleCheck>
+				<SingleCheck store={store.p1.init}>Attacker?</SingleCheck>
 			</Row>
 			<Row>
 				<Counter store={store.p1.cp}>CP</Counter>
-				<div class="divider divider-horizontal"></div>
 				<Counter store={store.p1.tp1_vp}>VP</Counter>
 			</Row>
 		</div>
@@ -46,11 +46,11 @@
 				<Faction store={store.p2.faction} />
 			</Row>
 			<Row>
-				<Options paintedstore={store.p2.painted} initstore={store.p2.init} />
+				<SingleCheck store={store.p2.painted}>Painted?</SingleCheck>
+				<SingleCheck store={store.p2.init}>Init?</SingleCheck>
 			</Row>
 			<Row>
 				<Counter store={store.p2.cp}>CP</Counter>
-				<div class="divider divider-horizontal"></div>
 				<Counter store={store.p2.tp1_vp}>VP</Counter>
 			</Row>
 		</div>
