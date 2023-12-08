@@ -44,7 +44,9 @@
 				<Counter store={store.p1.cp}>
 					<span slot="postText">CP</span>
 				</Counter>
-				<VP player={store.p1} />
+				<kbd class="kbd">
+					<VP player={store.p1} />
+				</kbd>
 				<Counter store={store.p1.bespokePoints}>
 					<span slot="postText">🐈</span>
 				</Counter>
@@ -78,7 +80,9 @@
 				<Counter store={store.p2.cp}>
 					<span slot="postText">CP</span>
 				</Counter>
-				<VP player={store.p2} />
+				<kbd class="kbd">
+					<VP player={store.p2} />
+				</kbd>
 				<Counter store={store.p2.bespokePoints}>
 					<span slot="postText">🐈‍⬛</span>
 				</Counter>
