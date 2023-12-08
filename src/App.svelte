@@ -10,8 +10,6 @@
 	import VP from './lib/VP.svelte';
 	import Reset from './lib/Reset.svelte';
 
-	// import NoSleep from './lib/NoSleep.svelte';
-
 	import {store} from './lib/stores.js';
 </script>
 
@@ -32,7 +30,6 @@
 		</div>
 	</div>
 
-	<!-- <div class="columns-1 2xl:columns-2 relative inset-0 min-h-full"> -->
 	<div class="flex flex-col md:flex-row min-w-full">
 		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half md:min-h-full min-w-[100%] md:min-w-half mt-5 md:mt-0 py-1">
 			<Row>
