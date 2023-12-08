@@ -5,7 +5,7 @@
 	import Row from './lib/Row.svelte';
 	import SingleCheck from './lib/SingleCheck.svelte';
 	import Name from './lib/Name.svelte';
-	import TP from './lib/TP.svelte';
+	import Primary from './lib/Primary.svelte';
 	import Tacop from './lib/Tacop.svelte';
 	import VP from './lib/VP.svelte';
 	import Reset from './lib/Reset.svelte';
@@ -52,10 +52,10 @@
 				</Counter>
 			</Row>
 			<Row>
-				<TP store={store.p1.tp1_vp}>TP1</TP>
-				<TP store={store.p1.tp2_vp}>TP2</TP>
-				<TP store={store.p1.tp3_vp}>TP3</TP>
-				<TP store={store.p1.tp4_vp}>TP4</TP>
+				<Primary store={store.p1.tp1_vp}>TP1</Primary>
+				<Primary store={store.p1.tp2_vp}>TP2</Primary>
+				<Primary store={store.p1.tp3_vp}>TP3</Primary>
+				<Primary store={store.p1.tp4_vp}>TP4</Primary>
 			</Row>
 			<Row>
 				<Tacop storeTaco={store.p1.taco1_name} storeVP1={store.p1.taco1_vp1} storeVP2={store.p1.taco1_vp2} />
@@ -88,10 +88,10 @@
 				</Counter>
 			</Row>
 			<Row>
-				<TP store={store.p2.tp1_vp}>TP1</TP>
-				<TP store={store.p2.tp2_vp}>TP2</TP>
-				<TP store={store.p2.tp3_vp}>TP3</TP>
-				<TP store={store.p2.tp4_vp}>TP4</TP>
+				<Primary store={store.p2.tp1_vp}>TP1</Primary>
+				<Primary store={store.p2.tp2_vp}>TP2</Primary>
+				<Primary store={store.p2.tp3_vp}>TP3</Primary>
+				<Primary store={store.p2.tp4_vp}>TP4</Primary>
 			</Row>
 			<Row>
 				<Tacop storeTaco={store.p2.taco1_name} storeVP1={store.p2.taco1_vp1} storeVP2={store.p2.taco1_vp2} />
