@@ -9,7 +9,7 @@
 		window?.navigator?.vibrate?.(100);
 	};
 
-    	const decrement = () => {
+	const decrement = () => {
 		store.update(x => x > 0 ? x - 1 : 0);
 		window?.navigator?.vibrate?.(100);
 	};
