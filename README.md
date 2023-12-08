@@ -1,16 +1,16 @@
 # ktcounter
 
-count victory and command points
+Count victory and command points
+
+Has a PWA.
 
 ## Todo
 
-- [x] TP1 has a bug with resetting
-- [ ] Figure out a better color theme
-- [ ] Add secondaries dependent on faction selection
 - [ ] Make initiative/attacker xor with the other player's initiative
 - [ ] Add modal/alert when resetting scores
-- [ ] Change reset to trash can icon
-      
+
+- [x] Change reset to trash can icon
+- [x] TP1 has a bug with resetting
 - [x] Save to localStorage
 - [x] Add turn counter
 - [x] Add an extra points (elite, saedath, etc) counter
@@ -20,12 +20,22 @@ count victory and command points
 ## Maybe
 
 - [ ] Selectable color theme
+- [ ] Figure out a better color theme
+- [ ] Add secondaries dependent on faction selection
 - [ ] Output a log / show all previous games
 - [ ] Save the time stamp of the game
 - [ ] Add Command point tracking of ploys used
 
-## Reference
+## References
 
-Tailwind: https://tailwindcss.com/docs/container
+Svelte: https://svelte.dev/docs/introduction
+
+Vite (not SvelteKit): https://vitejs.dev/guide/static-deploy.html#github-pages
+
+Vite PWA: https://vite-pwa-org.netlify.app/guide/
 
 DaisyUI: https://daisyui.com/components/button
+
+## License
+
+MIT
