@@ -7,6 +7,7 @@ Has a PWA.
 ## Todo
 
 - [ ] Make initiative/attacker xor with the other player's initiative
+- [ ] Use killteam fonts
 
 - [x] Add modal/alert when resetting scores
 - [x] Change reset to trash can icon
@@ -21,7 +22,9 @@ Has a PWA.
 
 - [ ] Selectable color theme
 - [ ] Figure out a better color theme
-- [ ] Add secondaries dependent on faction selection
+- [ ] Limit secondaries dependent on faction selection
+- [ ] Limit total primary vp to 6 per turn
+- [ ] Automatically gain CP when you advance the turn (probably not)
 - [ ] Output a log / show all previous games
 - [ ] Save the time stamp of the game
 - [ ] Add Command point tracking of ploys used
