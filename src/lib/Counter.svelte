@@ -15,22 +15,22 @@
 	};
 </script>
 
-<div class="flex flex-row">
-	<button class="btn btn-secondary btn-sm" on:click={decrement} title="Decrement">
+<div class="join flex flex-row">
+	<button class="join-item btn btn-secondary btn-sm" on:click={decrement} title="Decrement">
 		<Fa icon={faMinus} />
 	</button>
-	<div class="flex flex-row px-4 pt-[0.4em] bg-base-100 rounded-btn border-primary text-neutral-content">
+	<div class="join-item flex flex-row btn btn-sm">
 		{#if $$slots.preText}
-			<span class="text-sm pr-1"><slot name="preText"></slot></span>
+			<span class="text-sm"><slot name="preText"></slot></span>
 		{/if}
-		<span class="countdown font-mono text-sm pt-1">
+		<span class="countdown font-mono text-sm">
 			<span style="--value:{$store}"></span>
 		</span>
 		{#if $$slots.postText}
-			<span class="text-sm pl-1"><slot name="postText"></slot></span>
+			<span class="text-sm"><slot name="postText"></slot></span>
 		{/if}
 	</div>
-	<button class="btn btn-accent btn-sm" on:click={increment} title="Increment">
+	<button class="join-item btn btn-accent btn-sm" on:click={increment} title="Increment">
 		<Fa icon={faPlus} />
 	</button>	
 </div>
