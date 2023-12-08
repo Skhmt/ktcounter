@@ -17,7 +17,7 @@
 
 <div class="join flex flex-row">
 	<button class="join-item btn btn-secondary btn-sm" on:click={decrement} title="Decrement">
-		<Fa icon={faMinus} />
+		<Fa icon={faMinus} size="lg"/>
 	</button>
 	<div class="join-item flex flex-row btn btn-sm">
 		{#if $$slots.preText}
@@ -31,6 +31,6 @@
 		{/if}
 	</div>
 	<button class="join-item btn btn-accent btn-sm" on:click={increment} title="Increment">
-		<Fa icon={faPlus} />
+		<Fa icon={faPlus} size="lg"/>
 	</button>	
 </div>
