@@ -32,8 +32,10 @@
 	<div class="flex flex-col lg:flex-row min-w-full">
 		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half mt-5 lg:mt-0 py-1">
 			<Row>
-				<Name store={store.p1.name} placeholder="Player 1" />
-				<Faction store={store.p1.faction} />
+				<div class="join">
+					<Name store={store.p1.name} placeholder="Player 1" />
+					<Faction store={store.p1.faction} />
+				</div>
 			</Row>
 			<Row>
 				<SingleCheck store={store.p1.painted}>Painted?</SingleCheck>
@@ -69,8 +71,10 @@
 		</div>
 		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half mt-5 lg:mt-0 py-1">
 			<Row>
-				<Name store={store.p2.name} placeholder="Player 2" />
-				<Faction store={store.p2.faction} />
+				<div class="join">
+					<Name store={store.p2.name} placeholder="Player 2" />
+					<Faction store={store.p2.faction} />
+				</div>
 			</Row>
 			<Row>
 				<SingleCheck store={store.p2.painted}>Painted?</SingleCheck>
