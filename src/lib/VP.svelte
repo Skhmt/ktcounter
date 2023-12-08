@@ -43,9 +43,8 @@
 </script>
 
 
-<!-- <div class="flex flex-row px-4 pt-1 mt-0 bg-base-100 rounded-btn border-primary text-neutral-content"> -->
 <div class="flex flex-row">
-	<span class="countdown font-mono text-2xl pt-[.2em]">
+	<span class="countdown font-mono text-2xl pt-[.15em]">
 		<span style="--value:{$vp}"></span>
 	</span>
 	<span class="text-2xl pl-2">VP</span>

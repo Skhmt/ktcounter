@@ -9,7 +9,7 @@
 		window?.navigator?.vibrate?.(100);
 	};
 
-	const decrement = () => {
+    const decrement = () => {
 		store.update(x => x > 0 ? x - 1 : 0);
 		window?.navigator?.vibrate?.(100);
 	};
@@ -19,7 +19,7 @@
 	<button class="btn btn-secondary btn-sm" on:click={decrement} title="Decrement">
 		<Fa icon={faMinus} />
 	</button>
-	<div class="flex flex-row px-4 pt-1 bg-base-100 rounded-btn border-primary text-neutral-content">
+	<div class="flex flex-row px-4 pt-[0.4em] bg-base-100 rounded-btn border-primary text-neutral-content">
 		{#if $$slots.preText}
 			<span class="text-sm pr-1"><slot name="preText"></slot></span>
 		{/if}

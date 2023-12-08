@@ -17,7 +17,7 @@
 	<Fa icon={faTrashCan} />
 </button>
 
-<dialog id="reset_modal" class="modal justify-center content-center">
+<dialog id="reset_modal" class="modal place-content-center">
 	<div class="modal-box min-w-[300px] ">
 		<h3 class="font-bold text-lg">Reset all scores to default?</h3>
 		<p class="py-4">This can't be undone.</p>
