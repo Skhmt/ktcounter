@@ -24,14 +24,19 @@
 		$taco3_vp1, $taco3_vp2,
 		$painted,
 	]) => {
-		const total = [
-			$tp1_vp|0, $tp2_vp|0, $tp3_vp|0, $tp4_vp|0,
-			$taco1_vp1|0, $taco1_vp2|0,
-			$taco2_vp1|0, $taco2_vp2|0,
-			$taco3_vp1|0, $taco3_vp2|0,
-			$painted ? 2 : 0,
-		];
-		console.log(total);
+		let total = 0;
+		
+		total += parseInt($tp1_vp+'');
+		total += parseInt($tp2_vp+'');
+		total += parseInt($tp3_vp+'');
+		total += parseInt($tp4_vp+'');
+		if ($taco1_vp1) total++;
+		if ($taco1_vp2) total++;
+		if ($taco2_vp1) total++;
+		if ($taco2_vp2) total++;
+		if ($taco3_vp1) total++;
+		if ($taco3_vp2) total++;
+		if ($painted) total+= 2;
 		
 		return total;
 	}, 0);
