@@ -37,15 +37,16 @@
 			</Row>
 			<Row>
 				<SingleCheck store={store.p1.painted}>Painted?</SingleCheck>
+				<kbd class="kbd mt-1 mb-2">
+					<VP player={store.p1} />
+				</kbd>
 				<SingleCheck store={store.p1.init}>Attacker?</SingleCheck>
 			</Row>
 			<Row>
 				<Counter store={store.p1.cp}>
 					<span slot="postText">CP</span>
 				</Counter>
-				<kbd class="kbd">
-					<VP player={store.p1} />
-				</kbd>
+				
 				<Counter store={store.p1.bespokePoints}>
 					<span slot="postText">🐈</span>
 				</Counter>
@@ -73,15 +74,15 @@
 			</Row>
 			<Row>
 				<SingleCheck store={store.p2.painted}>Painted?</SingleCheck>
+				<kbd class="kbd mt-1 mb-2">
+					<VP player={store.p2} />
+				</kbd>
 				<SingleCheck store={store.p2.init}>Attacker?</SingleCheck>
 			</Row>
 			<Row>
 				<Counter store={store.p2.cp}>
 					<span slot="postText">CP</span>
 				</Counter>
-				<kbd class="kbd">
-					<VP player={store.p2} />
-				</kbd>
 				<Counter store={store.p2.bespokePoints}>
 					<span slot="postText">🐈‍⬛</span>
 				</Counter>
