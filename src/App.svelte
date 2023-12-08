@@ -8,6 +8,7 @@
 	import Primary from './lib/Primary.svelte';
 	import Tacop from './lib/Tacop.svelte';
 	import VP from './lib/VP.svelte';
+	import TP from './lib/TP.svelte';
 	import Reset from './lib/Reset.svelte';
 
 	import {store} from './lib/stores.js';
@@ -19,9 +20,7 @@
 			<img src={ktcLogo} class="logo w-14 h-14" alt="Kill Team Counter Logo" />
 		</div>
 		<div class="navbar-center">
-			<Counter store={store.turn}>
-				<span slot="preText">TP</span>
-			</Counter>
+			<TP store={store.turn} />
 		</div>
 		<div class="navbar-end">
 			<ul class="menu menu-horizontal px-1">

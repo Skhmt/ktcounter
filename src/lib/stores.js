@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 
 export const store = {
-	turn: storable('turn', 1),
+	turn: storable('turn', '1'),
 	p1: {
 		tp1_vp: storable('p1_tp1_vp', 0),
 		tp2_vp: storable('p1_tp2_vp', 0),
