@@ -32,7 +32,7 @@
 	<div class="flex flex-col lg:flex-row min-w-full">
 		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half mt-5 lg:mt-0 py-1">
 			<Row>
-				<div class="join">
+				<div class="join max-w-full">
 					<Name store={store.p1.name} placeholder="Player 1" />
 					<Faction store={store.p1.faction} />
 				</div>
@@ -71,7 +71,7 @@
 		</div>
 		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half mt-5 lg:mt-0 py-1">
 			<Row>
-				<div class="join">
+				<div class="join max-w-full">
 					<Name store={store.p2.name} placeholder="Player 2" />
 					<Faction store={store.p2.faction} />
 				</div>
