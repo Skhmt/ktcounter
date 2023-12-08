@@ -13,8 +13,8 @@
 </script>
 
 <!-- Open the modal using ID.showModal() method -->
-<button class="btn btn-secondary pt-4" title="Reset Counter" onclick="reset_modal.showModal()">
-	<Fa icon={faTrashCan} />
+<button class="btn btn-error pt-4 border border-black" title="Reset Counter" onclick="reset_modal.showModal()">
+	<Fa icon={faTrashCan} size="lg" translateY="-0.15" />
 </button>
 
 <dialog id="reset_modal" class="modal place-content-center">
