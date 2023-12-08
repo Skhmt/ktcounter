@@ -7,8 +7,8 @@ Has a PWA.
 ## Todo
 
 - [ ] Make initiative/attacker xor with the other player's initiative
-- [ ] Add modal/alert when resetting scores
 
+- [x] Add modal/alert when resetting scores
 - [x] Change reset to trash can icon
 - [x] TP1 has a bug with resetting
 - [x] Save to localStorage
