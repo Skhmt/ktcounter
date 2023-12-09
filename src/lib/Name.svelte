@@ -15,4 +15,4 @@
 </script>
 
 <input type="text" bind:value={name} on:input={update} placeholder={placeholder} 
-	class="join-item input input-bordered input-primary input-sm mt-1" />
+	class="join-item input input-bordered input-primary input-sm mt-1 max-w-half" />
