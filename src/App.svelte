@@ -30,9 +30,9 @@
 	</div>
 
 	<div class="flex flex-col lg:flex-row min-w-full">
-		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half mt-5 lg:mt-0 py-1">
+		<div class="flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half mt-5 lg:mt-0 py-1 max-w-md">
 			<Row>
-				<div class="join max-w-max">
+				<div class="join max-w-full">
 					<Name store={store.p1.name} placeholder="Player 1" />
 					<Faction store={store.p1.faction} />
 				</div>
@@ -69,9 +69,9 @@
 				<Tacop storeTaco={store.p1.taco3_name} storeVP1={store.p1.taco3_vp1} storeVP2={store.p1.taco3_vp2} />
 			</Row>
 		</div>
-		<div class="container flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half mt-5 lg:mt-0 py-1">
+		<div class="max-w-md flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half mt-5 lg:mt-0 py-1">
 			<Row>
-				<div class="join max-w-max">
+				<div class="join max-w-full">
 					<Name store={store.p2.name} placeholder="Player 2" />
 					<Faction store={store.p2.faction} />
 				</div>

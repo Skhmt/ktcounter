@@ -64,7 +64,7 @@
 	}
 </script>
 
-<select class="join-item select select-bordered select-primary select-sm mt-1 max-w-half" bind:value={selected} on:change={update}>
+<select class="join-item select select-bordered select-primary select-sm mt-1" bind:value={selected} on:change={update}>
 	<option disabled selected>Select Faction</option>
 	<optgroup label="Bespoke Teams">
 		{#each bespokeFactions as bf}
