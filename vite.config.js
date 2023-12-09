@@ -17,6 +17,8 @@ export default defineConfig({
 				short_name: 'KTCounter',
 				description: 'Helps you count victory and command points in Kill Team',
 				theme_color: '#000000',
+				background_color: '#000000',
+				display: 'fullscreen',
 				icons: [
 					{
 						src: 'ktc192.png',
