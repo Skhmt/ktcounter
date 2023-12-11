@@ -12,6 +12,15 @@
 	import Reset from './lib/Reset.svelte';
 
 	import {store} from './lib/stores.js';
+
+
+	// fix for iphone zoom issue
+	// https://weblog.west-wind.com/posts/2023/Apr/17/Preventing-iOS-Safari-Textbox-Zooming
+	if(navigator.userAgent.indexOf('iPhone') > -1 ) {
+		document
+			.querySelector("[name=viewport]")
+			.setAttribute("content","width=device-width, initial-scale=1, maximum-scale=1");
+	}
 </script>
 
 <main class="min-h-[100dvh] overflow-hidden overscroll-none bg-[black]">
