@@ -15,6 +15,9 @@
 <!-- Open the modal using ID.showModal() method -->
 <button class="btn btn-error pt-4 border border-black" title="Reset Counter" onclick="reset_modal.showModal()">
 	<Fa icon={faTrashCan} size="lg" translateY="-0.15" />
+	<span class="pb-1">
+		<slot></slot>
+	</span>
 </button>
 
 <dialog id="reset_modal" class="modal place-content-center">

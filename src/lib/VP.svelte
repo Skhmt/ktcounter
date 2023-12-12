@@ -44,8 +44,5 @@
 
 
 <div class="flex flex-row">
-	<span class="countdown font-mono text-2xl pt-[.15em]">
-		<span style="--value:{$vp}"></span>
-	</span>
-	<span class="text-2xl pl-2">VP</span>
+	<span class="font-mono text-xl">{$vp < 10 ? '0' + $vp : $vp} VP</span>
 </div>
