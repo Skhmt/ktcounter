@@ -17,7 +17,7 @@
 		<label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label> 
 		<ul class="menu p-4 w-80 z-10 right-4 h-screen bg-base-200 text-base-content">
 			<!-- Sidebar content here -->
-			<li><a>Previous Scores</a></li>
+			<li><a>View Previous Games</a></li>
 			<li><a>Theme Selector</a></li>
 			<li><div class="divider"></div></li>
 			<li><a href="https://github.com/Skhmt/ktcounter" target="_new">Github</a></li>
