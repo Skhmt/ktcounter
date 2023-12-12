@@ -21,7 +21,7 @@
 			<li><a>Theme Selector</a></li>
 			<li><div class="divider"></div></li>
 			<li><a href="https://github.com/Skhmt/ktcounter" target="_new">Github</a></li>
-			<li class="absolute bottom-3"><Reset>Reset scores</Reset></li>
+			<li class="absolute bottom-3"><Reset toggleCheckBox="my-drawer-2">Reset scores</Reset></li>
 		</ul>
 	</div>
 </div>

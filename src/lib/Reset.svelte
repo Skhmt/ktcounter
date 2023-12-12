@@ -6,9 +6,16 @@
 
 	import { store } from './stores.js';
 
+	export let toggleCheckBox;
+	const checkbox = document.getElementById(toggleCheckBox);
+
 	function resetCounter() {
 		store.reset();
 		window?.navigator?.vibrate?.(100);
+
+		if (checkbox.type == 'checkbox') {
+			checkbox.checked = !checkbox.checked;
+		}
 	}
 </script>
 
