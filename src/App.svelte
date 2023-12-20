@@ -13,10 +13,9 @@
 
 	import {store} from './lib/stores.js';
 
-
-	// fix for iphone zoom issue
-	// https://weblog.west-wind.com/posts/2023/Apr/17/Preventing-iOS-Safari-Textbox-Zooming
-	if(navigator.userAgent.indexOf('iPhone') > -1 ) {
+	if (navigator.userAgent.indexOf('iPhone') > -1 ) {
+		// fix for zoom issue
+		// https://weblog.west-wind.com/posts/2023/Apr/17/Preventing-iOS-Safari-Textbox-Zooming
 		document
 			.querySelector("[name=viewport]")
 			.setAttribute("content","width=device-width, initial-scale=1, maximum-scale=1");
@@ -38,7 +37,7 @@
 	</div>
 
 	<div class="flex flex-col lg:flex-row min-w-full">
-		<div class="flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half mt-5 py-1 max-w-md">
+		<div class="flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half lg:mr-1 mt-2 py-1 max-w-md">
 			<Row>
 				<div class="join max-w-full">
 					<Name store={store.p1.name} placeholder="Player 1" />
@@ -77,7 +76,7 @@
 				<Tacop storeTaco={store.p1.taco3_name} storeVP1={store.p1.taco3_vp1} storeVP2={store.p1.taco3_vp2} />
 			</Row>
 		</div>
-		<div class="max-w-md flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half mt-5 py-1">
+		<div class="max-w-md flex flex-col content-center justify-center bg-neutral min-h-half lg:min-h-full min-w-[100%] lg:min-w-half lg:ml-1 mt-2 py-1">
 			<Row>
 				<div class="join max-w-full">
 					<Name store={store.p2.name} placeholder="Player 2" />

@@ -19,7 +19,7 @@
 			<!-- Sidebar content here -->
 			<div class="pb-1 text-primary text-lg">Kill Team Counter</div>
 			<div class="divider">Features</div>
-			<li><a>View Previous Games</a></li> <!-- https://daisyui.com/components/table/ -->
+			<li><a>Past Game Logs</a></li> <!-- https://daisyui.com/components/table/ -->
 			<li><a>Pre-Game Reference</a></li> <!-- https://daisyui.com/components/accordion/ -->
 			<div class="divider">Settings</div>
 			<li><a>Core or '22 & '23 Tac Ops</a></li>
