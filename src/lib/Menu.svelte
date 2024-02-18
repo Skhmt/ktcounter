@@ -22,7 +22,7 @@
 			<li><a>Past Game Logs</a></li> <!-- https://daisyui.com/components/table/ -->
 			<li><a>Pre-Game Reference</a></li> <!-- https://daisyui.com/components/accordion/ -->
 			<div class="divider">Settings</div>
-			<li><a>Core or '22 & '23 Tac Ops</a></li>
+			<li><a>Core or Approved Ops</a></li>
 			<select class="select select-sm select-ghost w-full max-w-xs pl-[1.05em]">
 				<option disabled selected>Color Theme</option>
 				<option>Homer</option>

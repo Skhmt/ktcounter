@@ -10,7 +10,6 @@
 	import VP from './lib/VP.svelte';
 	import TP from './lib/TP.svelte';
 	import Menu from './lib/Menu.svelte';
-
 	import {store} from './lib/stores.js';
 
 	if (navigator.userAgent.indexOf('iPhone') > -1 ) {
