@@ -20,15 +20,15 @@
 		<Fa icon={faMinus} size="lg"/>
 	</button>
 	<div class="join-item flex flex-row btn btn-sm">
-		{#if $$slots.preText}
-			<span class="text-sm"><slot name="preText"></slot></span>
-		{/if}
-		<span class="countdown font-mono text-sm">
-			<span style="--value:{$store}"></span>
+		<span class="font-mono text-sm">
+			{#if $$slots.preText}
+				<slot name="preText"></slot>
+			{/if}
+			{$store < 10 ? '0' + $store : $store}
+			{#if $$slots.postText}
+				<slot name="postText"></slot>
+			{/if}
 		</span>
-		{#if $$slots.postText}
-			<span class="text-sm"><slot name="postText"></slot></span>
-		{/if}
 	</div>
 	<button class="join-item btn btn-accent btn-sm" on:click={increment} title="Increment">
 		<Fa icon={faPlus} size="lg"/>
