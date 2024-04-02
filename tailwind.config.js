@@ -8,7 +8,11 @@ export default {
 		minWidth: {
 			'half': '50%'
 		},
-		extend: {}
+		extend: {},
+		fontFamily: {
+			'sans': ['Quay', 'system-ui', 'sans-serif', 'segoe'],
+			'mono': ['Gunplay', 'ui-monospace', 'Consolas', 'monospace']
+		}
 	},
 	daisyui: {
 		themes: [
