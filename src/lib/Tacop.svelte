@@ -12,7 +12,7 @@
 	];
 
 	const security = [
-		'Central Control',
+		'Central/Furnace Control',
 		'Escort Operative',
 		'Hold Them Back',
 		'Protect Assets',
@@ -34,7 +34,7 @@
 		'Outflank',
 		'Plant Transponder',
 		'Recover Item',
-		'Secure Vantage/Unexplored Rooms',
+		'Secure Vantage/Rooms',
 		'Surge Forward',
 	];
 
