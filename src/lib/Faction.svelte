@@ -40,6 +40,7 @@
 		'Kasrkin',
 		'Kommando',
 		'Legionary',
+		'Mandrake',
 		'Nemesis Claw',
 		'Novitiate',
 		'Pathfinder',
