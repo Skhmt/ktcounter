@@ -24,22 +24,13 @@ export default {
 			{
 				mytheme: {
 					'primary': '#F25B21',
-
 					'secondary': '#22D1F2',
-
 					'accent': '#22F289',
-
-					// 'neutral': '#496C73',
 					'neutral': '#42474A',
-
 					'base-100': '#332E2C',
-
 					'info': '#2237F2',
-
 					'success': '#22F2CF',
-
 					'warning': '#F2EE22',
-
 					'error': '#F22228',
 				},
 			},
