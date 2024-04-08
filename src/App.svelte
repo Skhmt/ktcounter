@@ -1,5 +1,4 @@
 <script>
-	import ktcLogo from '/ktc192.png';
 	import Counter from './lib/Counter.svelte';
 	import Faction from './lib/Faction.svelte';
 	import Row from './lib/Row.svelte';
@@ -11,6 +10,7 @@
 	import TP from './lib/TP.svelte';
 	import Reset from './lib/Reset.svelte';
 	import {store} from './lib/stores.js';
+	import krillLogo from '/krill192.png';
 
 
 	// fix for iphone zoom issue
@@ -25,7 +25,7 @@
 <main class="min-h-[100dvh] overflow-hidden overscroll-none bg-[black]">
 	<div class="navbar bg-primary mb-0">
 		<div class="navbar-start">
-			<img src={ktcLogo} class="logo w-14 h-14" alt="Kill Team Counter Logo" />
+			<img src={krillLogo} class="logo w-14 h-14" alt="Kill Team Counter Logo" />
 		</div>
 		<div class="navbar-center">
 			<TP store={store.turn} />

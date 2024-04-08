@@ -8,12 +8,14 @@ export default defineConfig({
 		svelte(),
 		VitePWA({
 			includeAssets: [
-				'ktc180.png',
-				'ktc192.png',
-				'ktc512.png'
+				'krill180.png',
+				'krill192.png',
+				'krill512.png',
+				'gunplay.woff2',
+				'quay.woff2'
 			],
 			manifest: {
-				name: 'Kill Team Counter',
+				name: 'Krill Team Counter',
 				short_name: 'KTCounter',
 				description: 'Helps you count victory and command points in Kill Team',
 				theme_color: '#000000',
@@ -21,12 +23,12 @@ export default defineConfig({
 				display: 'fullscreen',
 				icons: [
 					{
-						src: 'ktc192.png',
+						src: 'krill192.png',
 						sizes: '192x192',
 						type: 'image/png'
 					},
 					{
-						src: 'ktc512.png',
+						src: 'krill512.png',
 						sizes: '512x512',
 						type: 'image/png'
 					},

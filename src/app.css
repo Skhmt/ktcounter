@@ -11,10 +11,10 @@
 @layer base {
 	@font-face {
 		font-family: 'Quay';
-		src: url('Quay.woff2') format('woff2');
+		src: url('./quay.woff2') format('woff2');
 	}
 	@font-face {
 		font-family: 'Gunplay';
-		src: url('gunplay.woff2') format('woff2');
+		src: url('./gunplay.woff2') format('woff2');
 	}
 }
