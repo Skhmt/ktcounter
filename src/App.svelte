@@ -96,7 +96,7 @@
 					<span slot="postText">CP</span>
 				</Counter>
 				<Counter store={store.p2.bespokePoints}>
-					<span slot="postText">🐈‍⬛</span>
+					<span slot="postText">🦐</span>
 				</Counter>
 			</Row>
 			<Row>
