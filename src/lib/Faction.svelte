@@ -23,6 +23,7 @@
 	const bespokeFactions = [
 		'Blades of Khaine',
 		'Blooded',
+		'Brood Brothers',
 		'Chaos Cult',
 		'Corsair Voidscarred',
 		'Elucidian Starstrider',
@@ -32,6 +33,7 @@
 		'Gellerpox Infected',
 		'Hand of the Archon',
 		'Hearthkyn Salvager',
+		'Hearnkyn Yaegers',
 		'Hierotek Circle',
 		'Hunter Clade',
 		'Imperial Navy Breacher',
