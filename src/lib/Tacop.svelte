@@ -1,92 +1,105 @@
 <script>
-	import SingleCheck from './SingleCheck.svelte';
+	/*
+'Farstalker Kinband',
+{
+	name: 'Farstalker Kinband',
+	type: 'bespoke',
+	faction: [
+		'Butcher',
+		'Balance The Books',
+		'Bounty Hunters'
+	],
+	archetypes: [
+		'seek',
+		'sec',
+		'infil',
+		'recon',
+	]
+}
+	*/
+	import SingleCheck from "./SingleCheck.svelte";
+	import { seek, sec, infil, recon } from "../data/tacops.js";
+	import teams from "../data/teams.js";
 
-	export let storeTaco;
+	export let storeTacoName;
 	export let storeVP1;
 	export let storeVP2;
-
-	const faction = [
-		'Faction Tac Op 1',
-		'Faction Tac Op 2',
-		'Faction Tac Op 3',
-	];
-
-	const security = [
-		'Central/Furnace Control',
-		'Escort Operative',
-		'Hold Them Back',
-		'Protect Assets',
-		'Secure Centre Line',
-		'Seize Ground/Access Point',
-	];
-
-	const seek = [
-		'Assassinate Target',
-		'Eliminate Guards',
-		'Executioner',
-		'Headhunter',
-		'Rob & Ransack',
-		'Rout',
-	];
-
-	const recon = [
-		'Courier',
-		'Outflank',
-		'Plant Transponder',
-		'Recover Item',
-		'Secure Vantage/Rooms',
-		'Surge Forward',
-	];
-
-	const infil = [
-		'Gather Surveillance',
-		'Implant',
-		'Install Device',
-		'Seize Defences',
-		'Stalk Target',
-		'Subversive Control',
-	];
+	export let storeFaction;
 
 	let selected;
+	let faction;
 
-	let unsubscribeTaco = storeTaco.subscribe(value => {
+	let unsubscribeTaco = storeTacoName.subscribe((value) => {
 		if (value) selected = value;
-		else selected = 'Select Tac Op';
+		else selected = "Select Tac Op";
 	});
 
 	function updateTaco() {
-		storeTaco.set(selected);
+		storeTacoName.set(selected);
 	}
+
+	let unsubscribeFaction = storeFaction.subscribe((value) => {
+		if (value) faction = value;
+		else faction = "Select Faction";
+	});
 </script>
 
 <div class="flex flex-row content-center justify-center mt-2 md:mt-1">
-	<select class="select select-bordered select-sm mt-1" bind:value={selected} on:change={updateTaco}>
+	<select
+		class="select select-bordered select-sm mt-1"
+		bind:value={selected}
+		on:change={updateTaco}
+	>
 		<option disabled selected>Select Tac Op</option>
-		<optgroup label="Faction">
-			{#each faction as x}
-				<option value={x}>{x}</option>
-			{/each}
-		</optgroup>
-		<optgroup label="Security">
-			{#each security as x}
-				<option value={x}>{x}</option>
-			{/each}
-		</optgroup>
-		<optgroup label="Seek & Destroy">
-			{#each seek as x}
-				<option value={x}>{x}</option>
-			{/each}
-		</optgroup>
-		<optgroup label="Recon">
-			{#each recon as x}
-				<option value={x}>{x}</option>
-			{/each}
-		</optgroup>
-		<optgroup label="Infiltration">
-			{#each infil as x}
-				<option value={x}>{x}</option>
-			{/each}
-		</optgroup>
+		{#if !teams.has(faction)}
+			<optgroup label="Factions">
+				<option value="Faction 1">Faction 1</option>
+				<option value="Faction 2">Faction 2</option>
+				<option value="Faction 3">Faction 3</option>
+			</optgroup>
+		{:else if teams.get(faction).faction?.length > 0}
+			<optgroup label="Faction">
+				{#each teams.get(faction).faction as x}
+					<option value={x}>{x}</option>
+				{/each}
+			</optgroup>
+		{/if}
+		{#if !teams.has(faction) || teams
+				.get(faction)
+				.archetypes?.includes("sec")}
+			<optgroup label="Security">
+				{#each sec as x}
+					<option value={x}>{x}</option>
+				{/each}
+			</optgroup>
+		{/if}
+		{#if !teams.has(faction) || teams
+				.get(faction)
+				.archetypes?.includes("seek")}
+			<optgroup label="Seek & Destroy">
+				{#each seek as x}
+					<option value={x}>{x}</option>
+				{/each}
+			</optgroup>
+		{/if}
+		{#if !teams.has(faction) || teams
+				.get(faction)
+				.archetypes?.includes("recon")}
+			<optgroup label="Recon">
+				{#each recon as x}
+					<option value={x}>{x}</option>
+				{/each}
+			</optgroup>
+		{/if}
+		{#if !teams.has(faction) || teams
+				.get(faction)
+				.archetypes?.includes("infil")}
+			<optgroup label="Infiltration">
+				{#each infil as x}
+					<option value={x}>{x}</option>
+				{/each}
+			</optgroup>
+		{/if}
 	</select>
 
 	<SingleCheck store={storeVP1}></SingleCheck>
