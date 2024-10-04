@@ -1,16 +1,25 @@
 <script>
 	export let store;
+
+	let selected;
+
+	let unsubscribe = store.subscribe((value) => {
+		if (value) selected = value;
+		else selected = "";
+	});
+
+	function update() {
+		store.set(selected);
+	}
 </script>
 
-<label class="form-control flex flex-row mt-3">
-	<div class="label mr-1">
-		<span class="label-text-alt"><slot></slot></span>
-	</div>
-	<select class="select select-bordered select-sm" bind:value={$store}>
-		<option selected>0</option>
-		<option>1</option>
-		<option>2</option>
-		<option>3</option>
-		<option>4</option>
-	</select>
-</label>
+<select
+	class="join-item select select-primary select-sm"
+	bind:value={selected}
+	on:change={update}
+>
+	<option value="" selected>Unknown</option>
+	<option value="kill">Kill Op</option>
+	<option value="taco">Tactical Op</option>
+	<option value="crit">Critical Op</option>
+</select>

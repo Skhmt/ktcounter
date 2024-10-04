@@ -22,8 +22,7 @@
 	import teams from "../data/teams.js";
 
 	export let storeTacoName;
-	export let storeVP1;
-	export let storeVP2;
+	export let storeVP;
 	export let storeFaction;
 
 	let selected;
@@ -81,6 +80,5 @@
 		{/if}
 	</select>
 
-	<SingleCheck store={storeVP1}></SingleCheck>
-	<SingleCheck store={storeVP2}></SingleCheck>
+	<SingleCheck store={storeVP}></SingleCheck>
 </div>

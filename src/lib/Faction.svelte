@@ -22,14 +22,12 @@
 </script>
 
 <select
-	class="join-item select select-bordered select-primary select-sm mt-1"
+	class="join-item select select-bordered select-primary select-sm mt-2"
 	bind:value={selected}
 	on:change={update}
 >
-	<option selected>Select Faction</option>
-	<optgroup label=" ">
-		{#each bespokeFactions as bf}
-			<option value={bf}>{bf}</option>
-		{/each}
-	</optgroup>
+	<option selected disabled>Select Faction</option>
+	{#each bespokeFactions as bf}
+		<option value={bf}>{bf}</option>
+	{/each}
 </select>

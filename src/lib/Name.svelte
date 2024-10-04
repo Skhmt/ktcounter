@@ -4,9 +4,9 @@
 
 	let name;
 
-	let unsubscribe = store.subscribe(value => {
+	let unsubscribe = store.subscribe((value) => {
 		if (value) name = value;
-		else name = '';
+		else name = "";
 	});
 
 	function update() {
@@ -14,5 +14,11 @@
 	}
 </script>
 
-<input type="text" bind:value={name} on:input={update} placeholder={placeholder} 
-	class="join-item input input-bordered input-primary input-sm mt-1" size="13" />
+<input
+	type="text"
+	bind:value={name}
+	on:input={update}
+	{placeholder}
+	class="join-item input input-bordered input-primary input-sm mt-2"
+	size="13"
+/>
