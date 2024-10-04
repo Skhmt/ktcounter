@@ -22,8 +22,7 @@
 	import teams from "../data/teams.js";
 
 	export let storeTacoName;
-	export let storeVP1;
-	export let storeVP2;
+	export let storeVP;
 	export let storeFaction;
 
 	let selected;
@@ -51,49 +50,28 @@
 		on:change={updateTaco}
 	>
 		<option disabled selected>Select Tac Op</option>
-		{#if !teams.has(faction)}
-			<optgroup label="Factions">
-				<option value="Faction 1">Faction 1</option>
-				<option value="Faction 2">Faction 2</option>
-				<option value="Faction 3">Faction 3</option>
-			</optgroup>
-		{:else if teams.get(faction).faction?.length > 0}
-			<optgroup label="Faction">
-				{#each teams.get(faction).faction as x}
-					<option value={x}>{x}</option>
-				{/each}
-			</optgroup>
-		{/if}
-		{#if !teams.has(faction) || teams
-				.get(faction)
-				.archetypes?.includes("sec")}
+		{#if !teams.has(faction) || teams.get(faction).includes("sec")}
 			<optgroup label="Security">
 				{#each sec as x}
 					<option value={x}>{x}</option>
 				{/each}
 			</optgroup>
 		{/if}
-		{#if !teams.has(faction) || teams
-				.get(faction)
-				.archetypes?.includes("seek")}
+		{#if !teams.has(faction) || teams.get(faction).includes("seek")}
 			<optgroup label="Seek & Destroy">
 				{#each seek as x}
 					<option value={x}>{x}</option>
 				{/each}
 			</optgroup>
 		{/if}
-		{#if !teams.has(faction) || teams
-				.get(faction)
-				.archetypes?.includes("recon")}
+		{#if !teams.has(faction) || teams.get(faction).includes("recon")}
 			<optgroup label="Recon">
 				{#each recon as x}
 					<option value={x}>{x}</option>
 				{/each}
 			</optgroup>
 		{/if}
-		{#if !teams.has(faction) || teams
-				.get(faction)
-				.archetypes?.includes("infil")}
+		{#if !teams.has(faction) || teams.get(faction).includes("infil")}
 			<optgroup label="Infiltration">
 				{#each infil as x}
 					<option value={x}>{x}</option>
@@ -102,6 +80,5 @@
 		{/if}
 	</select>
 
-	<SingleCheck store={storeVP1}></SingleCheck>
-	<SingleCheck store={storeVP2}></SingleCheck>
+	<SingleCheck store={storeVP}></SingleCheck>
 </div>

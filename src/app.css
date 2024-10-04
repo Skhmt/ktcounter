@@ -1,20 +1,11 @@
 :root {
 	/* disable zooming in ios */
 	touch-action: pan-x pan-y;
-	height: 100% 
+	height: 100%
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	@font-face {
-		font-family: 'Quay';
-		src: url('./quay.woff2') format('woff2');
-	}
-	@font-face {
-		font-family: 'Gunplay';
-		src: url('./gunplay.woff2') format('woff2');
-	}
-}
+@layer base {}

@@ -4,13 +4,9 @@
 	import teams from "../data/teams.js";
 
 	const bespokeFactions = [];
-	const compendiumFactions = [];
-	const narrativeFactions = [];
 
 	teams.forEach((v, k) => {
-		if (v.type == "bespoke") bespokeFactions.push(k);
-		else if (v.type == "compendium") compendiumFactions.push(k);
-		else narrativeFactions.push(k);
+		bespokeFactions.push(k);
 	});
 
 	let selected;
@@ -26,24 +22,12 @@
 </script>
 
 <select
-	class="join-item select select-bordered select-primary select-sm mt-1"
+	class="join-item select select-bordered select-primary select-sm mt-2"
 	bind:value={selected}
 	on:change={update}
 >
-	<option selected>Select Faction</option>
-	<optgroup label="Bespoke Teams">
-		{#each bespokeFactions as bf}
-			<option value={bf}>{bf}</option>
-		{/each}
-	</optgroup>
-	<optgroup label="Compendium Teams">
-		{#each compendiumFactions as cf}
-			<option value={cf}>{cf}</option>
-		{/each}
-	</optgroup>
-	<optgroup label="Narrative Teams">
-		{#each narrativeFactions as nf}
-			<option value={nf}>{nf}</option>
-		{/each}
-	</optgroup>
+	<option selected disabled>Select Faction</option>
+	{#each bespokeFactions as bf}
+		<option value={bf}>{bf}</option>
+	{/each}
 </select>

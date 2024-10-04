@@ -2,15 +2,15 @@
 	import Counter from "./lib/Counter.svelte";
 	import Faction from "./lib/Faction.svelte";
 	import Row from "./lib/Row.svelte";
-	import SingleCheck from "./lib/SingleCheck.svelte";
+	// import SingleCheck from "./lib/SingleCheck.svelte";
 	import Name from "./lib/Name.svelte";
-	import Primary from "./lib/Primary.svelte";
-	import Tacop from "./lib/Tacop.svelte";
+	// import Tacop from "./lib/Tacop.svelte";
 	import VP from "./lib/VP.svelte";
 	import TP from "./lib/TP.svelte";
 	import Reset from "./lib/Reset.svelte";
 	import { store } from "./lib/stores.js";
 	import krillLogo from "/krill192.png";
+	import Primary from "./lib/Primary.svelte";
 
 	// fix for iphone zoom issue
 	// https://weblog.west-wind.com/posts/2023/Apr/17/Preventing-iOS-Safari-Textbox-Zooming
@@ -54,50 +54,39 @@
 				</div>
 			</Row>
 			<Row>
-				<SingleCheck store={store.p1.painted}>Painted?</SingleCheck>
-				<kbd class="kbd mt-1 mb-2">
-					<VP player={store.p1} />
-				</kbd>
-				<SingleCheck store={store.p1.init}>Attacker?</SingleCheck>
-			</Row>
-			<Row>
 				<Counter store={store.p1.cp}>
 					<span slot="postText">CP</span>
 				</Counter>
-
+				<kbd class="kbd">
+					<VP player={store.p1} />
+				</kbd>
+			</Row>
+			<!-- <Row>
 				<Counter store={store.p1.bespokePoints}>
 					<span slot="postText">🐈</span>
 				</Counter>
+			</Row> -->
+			<Row>
+				<div>Kill Op</div>
+				<Counter store={store.p1.kill_vp}>
+					<span slot="postText">VP</span>
+				</Counter>
 			</Row>
 			<Row>
-				<Primary store={store.p1.tp1_vp}>TP1</Primary>
-				<Primary store={store.p1.tp2_vp}>TP2</Primary>
-				<Primary store={store.p1.tp3_vp}>TP3</Primary>
-				<Primary store={store.p1.tp4_vp}>TP4</Primary>
+				<div>Tac Op</div>
+				<Counter store={store.p1.taco_vp}>
+					<span slot="postText">VP</span>
+				</Counter>
 			</Row>
 			<Row>
-				<Tacop
-					storeTacoName={store.p1.taco1_name}
-					storeVP1={store.p1.taco1_vp1}
-					storeVP2={store.p1.taco1_vp2}
-					storeFaction={store.p1.faction}
-				/>
+				<div>Crit Op</div>
+				<Counter store={store.p1.crit_vp}>
+					<span slot="postText">VP</span>
+				</Counter>
 			</Row>
 			<Row>
-				<Tacop
-					storeTacoName={store.p1.taco2_name}
-					storeVP1={store.p1.taco2_vp1}
-					storeVP2={store.p1.taco2_vp2}
-					storeFaction={store.p1.faction}
-				/>
-			</Row>
-			<Row>
-				<Tacop
-					storeTacoName={store.p1.taco3_name}
-					storeVP1={store.p1.taco3_vp1}
-					storeVP2={store.p1.taco3_vp2}
-					storeFaction={store.p1.faction}
-				/>
+				<div>Primary Op</div>
+				<Primary store={store.p1.primary} />
 			</Row>
 		</div>
 		<div
@@ -110,49 +99,39 @@
 				</div>
 			</Row>
 			<Row>
-				<SingleCheck store={store.p2.painted}>Painted?</SingleCheck>
-				<kbd class="kbd mt-1 mb-2">
-					<VP player={store.p2} />
-				</kbd>
-				<SingleCheck store={store.p2.init}>Attacker?</SingleCheck>
-			</Row>
-			<Row>
 				<Counter store={store.p2.cp}>
 					<span slot="postText">CP</span>
 				</Counter>
+				<kbd class="kbd">
+					<VP player={store.p2} />
+				</kbd>
+			</Row>
+			<!-- <Row>
 				<Counter store={store.p2.bespokePoints}>
 					<span slot="postText">🦐</span>
 				</Counter>
+			</Row> -->
+			<Row>
+				<div>Kill Op</div>
+				<Counter store={store.p2.kill_vp}>
+					<span slot="postText">VP</span>
+				</Counter>
 			</Row>
 			<Row>
-				<Primary store={store.p2.tp1_vp}>TP1</Primary>
-				<Primary store={store.p2.tp2_vp}>TP2</Primary>
-				<Primary store={store.p2.tp3_vp}>TP3</Primary>
-				<Primary store={store.p2.tp4_vp}>TP4</Primary>
+				<div>Tac Op</div>
+				<Counter store={store.p2.taco_vp}>
+					<span slot="postText">VP</span>
+				</Counter>
 			</Row>
 			<Row>
-				<Tacop
-					storeTacoName={store.p2.taco1_name}
-					storeVP1={store.p2.taco1_vp1}
-					storeVP2={store.p2.taco1_vp2}
-					storeFaction={store.p2.faction}
-				/>
+				<div>Crit Op</div>
+				<Counter store={store.p2.crit_vp}>
+					<span slot="postText">VP</span>
+				</Counter>
 			</Row>
 			<Row>
-				<Tacop
-					storeTacoName={store.p2.taco2_name}
-					storeVP1={store.p2.taco2_vp1}
-					storeVP2={store.p2.taco2_vp2}
-					storeFaction={store.p2.faction}
-				/>
-			</Row>
-			<Row>
-				<Tacop
-					storeTacoName={store.p2.taco3_name}
-					storeVP1={store.p2.taco3_vp1}
-					storeVP2={store.p2.taco3_vp2}
-					storeFaction={store.p2.faction}
-				/>
+				<div>Primary Op</div>
+				<Primary store={store.p2.primary} />
 			</Row>
 		</div>
 	</div>

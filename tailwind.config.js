@@ -10,8 +10,8 @@ export default {
 		},
 		extend: {},
 		fontFamily: {
-			'sans': ['Quay', 'system-ui', 'sans-serif', 'segoe'],
-			'mono': ['Gunplay', 'ui-monospace', 'Consolas', 'monospace']
+			'sans': ['system-ui', 'sans-serif', 'segoe'],
+			'mono': ['ui-monospace', 'Consolas', 'monospace']
 		}
 	},
 	daisyui: {
