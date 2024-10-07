@@ -1,5 +1,6 @@
 <script>
 	import Counter from "./lib/Counter.svelte";
+	import Text from "./lib/Text.svelte";
 	import Faction from "./lib/Faction.svelte";
 	import Row from "./lib/Row.svelte";
 	// import SingleCheck from "./lib/SingleCheck.svelte";
@@ -67,25 +68,25 @@
 				</Counter>
 			</Row> -->
 			<Row>
-				<div>Kill Op</div>
+				<Text>Kill Op</Text>
 				<Counter store={store.p1.kill_vp}>
 					<span slot="postText">VP</span>
 				</Counter>
 			</Row>
 			<Row>
-				<div>Tac Op</div>
+				<Text>Tac Op</Text>
 				<Counter store={store.p1.taco_vp}>
 					<span slot="postText">VP</span>
 				</Counter>
 			</Row>
 			<Row>
-				<div>Crit Op</div>
+				<Text>Crit Op</Text>
 				<Counter store={store.p1.crit_vp}>
 					<span slot="postText">VP</span>
 				</Counter>
 			</Row>
 			<Row>
-				<div>Primary Op</div>
+				<Text>Primary Op</Text>
 				<Primary store={store.p1.primary} />
 			</Row>
 		</div>
@@ -112,25 +113,25 @@
 				</Counter>
 			</Row> -->
 			<Row>
-				<div>Kill Op</div>
+				<Text>Kill Op</Text>
 				<Counter store={store.p2.kill_vp}>
 					<span slot="postText">VP</span>
 				</Counter>
 			</Row>
 			<Row>
-				<div>Tac Op</div>
+				<Text>Tac Op</Text>
 				<Counter store={store.p2.taco_vp}>
 					<span slot="postText">VP</span>
 				</Counter>
 			</Row>
 			<Row>
-				<div>Crit Op</div>
+				<Text>Crit Op</Text>
 				<Counter store={store.p2.crit_vp}>
 					<span slot="postText">VP</span>
 				</Counter>
 			</Row>
 			<Row>
-				<div>Primary Op</div>
+				<Text>Primary Op</Text>
 				<Primary store={store.p2.primary} />
 			</Row>
 		</div>

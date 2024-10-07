@@ -14,7 +14,7 @@
 </script>
 
 <select
-	class="join-item select select-primary select-sm"
+	class="join-item select select-primary select-md"
 	bind:value={selected}
 	on:change={update}
 >

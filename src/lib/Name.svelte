@@ -19,6 +19,6 @@
 	bind:value={name}
 	on:input={update}
 	{placeholder}
-	class="join-item input input-bordered input-primary input-sm mt-2"
+	class="join-item input input-bordered input-primary input-md mt-2"
 	size="13"
 />

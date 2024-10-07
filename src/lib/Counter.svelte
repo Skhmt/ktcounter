@@ -16,10 +16,10 @@
 </script>
 
 <div class="join flex flex-row">
-	<button class="join-item btn btn-secondary btn-sm" on:click={decrement} title="Decrement">
+	<button class="join-item btn btn-secondary btn-md" on:click={decrement} title="Decrement">
 		<Fa icon={faMinus} size="lg"/>
 	</button>
-	<div class="join-item flex flex-row btn btn-sm">
+	<div class="join-item flex flex-row btn btn-md text-lg">
 		<span class="font-mono text-sm">
 			{#if $$slots.preText}
 				<slot name="preText"></slot>
@@ -30,7 +30,7 @@
 			{/if}
 		</span>
 	</div>
-	<button class="join-item btn btn-accent btn-sm" on:click={increment} title="Increment">
+	<button class="join-item btn btn-accent btn-md" on:click={increment} title="Increment">
 		<Fa icon={faPlus} size="lg"/>
 	</button>	
 </div>

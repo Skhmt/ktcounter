@@ -22,7 +22,7 @@
 </script>
 
 <select
-	class="join-item select select-bordered select-primary select-sm mt-2"
+	class="join-item select select-bordered select-primary select-md mt-2"
 	bind:value={selected}
 	on:change={update}
 >
