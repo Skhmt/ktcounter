@@ -26,10 +26,13 @@ export default new Map([
     ["Novitiates", ["sec", "recon"]],
     ["Pathfinders", ["infil", "recon"]],
     ["Phobos Strike Team", ["infil", "recon"]],
+    ["Plague Marines",[]],
+    ["Ratlings",[]],
     ["Scout Squad", ["infil", "recon"]],
     ["Tempestus Aquilons", ["seek", "recon"]],
     ["Warpcoven", ["sec", "recon"]],
     ["Wyrmblade", ["seek", "infil"]],
+    ["Wrecka Krew", []],
     ["Vespid Stingwings", ["seek", "recon"]],
     ["Void-dancer Troupe", ["infil", "recon"]]
 ]);
